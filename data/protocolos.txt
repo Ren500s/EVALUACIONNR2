@@ -1,0 +1,5 @@
+Pacientes con neumonía grave y urgencia alta deben ser evaluados para ingreso a UCI.
+
+Pacientes estables pueden ser derivados a hospitalización general.
+
+Pacientes críticos tienen prioridad sobre pacientes electivos.
