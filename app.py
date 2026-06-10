@@ -1,15 +1,25 @@
-from datetime import datetime
-
 def asignar_cama(paciente, diagnostico, urgencia, camas_uci):
 
-    if urgencia.lower() == "alta" and camas_uci > 0:
-        return f"Paciente {paciente}: asignar cama UCI."
+    print("\nAnalizando paciente...")
 
-    elif urgencia.lower() == "alta" and camas_uci == 0:
-        return f"Paciente {paciente}: ingresar a lista de espera UCI."
+    if urgencia.lower() == "alta":
+
+        if camas_uci > 0:
+            decision = "Asignar cama UCI"
+        else:
+            decision = "Lista de espera UCI"
 
     else:
-        return f"Paciente {paciente}: asignar cama hospitalaria general."
+        decision = "Asignar cama hospitalaria general"
+
+    return f"""
+Paciente: {paciente}
+Diagnóstico: {diagnostico}
+Urgencia: {urgencia}
+
+Decisión del agente:
+{decision}
+"""
 
 
 resultado = asignar_cama(
